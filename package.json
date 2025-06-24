@@ -1,0 +1,36 @@
+{
+  "name": "jakp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/PromzzyKoncepts/JAKP#readme",
+  "bugs": {
+    "url": "https://github.com/PromzzyKoncepts/JAKP/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PromzzyKoncepts/JAKP.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "express": "^5.1.0",
+    "hls.js": "^1.6.5",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.0",
+    "react-icons": "^5.5.0",
+    "react-share": "^5.2.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}
