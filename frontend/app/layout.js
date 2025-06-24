@@ -1,14 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Fondamento, Geist_Mono, Luckiest_Guy, Sniglet } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const luckiestGuy = Luckiest_Guy({
+  variable: "--font-luckiest-guy",
+  weight: "400", // Only "400" is available for Luckiest Guy
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const SnigletMono = Sniglet({
+  variable: "--font-snig",
   subsets: ["latin"],
+  weight: ["400", "800"],
+});
+
+const FondamentoMono = Fondamento({
+  variable: "--font-fondamento",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -19,8 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+     
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${luckiestGuy.variable} ${SnigletMono.variable}  ${FondamentoMono.variable} antialiased`}
       >
         {children}
       </body>
