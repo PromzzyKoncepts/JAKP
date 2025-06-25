@@ -126,9 +126,9 @@ export default function LiveStreamPage() {
   //   return <UserForm onSubmit={handleUserSubmit} />;
   // }
 
-  if (!streamData) {
-    return <div>Loading stream data...</div>;
-  }
+  // if (!streamData) {
+  //   return <div>Loading stream data...</div>;
+  // }
 
   return (
     <div style={{backgroundImage: `url(/bg.png)`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="min-h-screen bg-gray-100">
