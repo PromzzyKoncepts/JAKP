@@ -15,7 +15,7 @@ const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
     }
 
     // Check if browser supports native HLS playback
-    if (ref.current.canPlayType('application/vnd.apple.mpegurl')) {
+    if (ref?.current?.canPlayType('application/vnd.apple.mpegurl')) {
       // For Safari and other browsers that support native HLS
       ref.current.src = src;
     } else if (Hls.isSupported()) {
@@ -23,18 +23,18 @@ const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
       const hls = new Hls();
       hlsRef.current = hls;
       
-      hls.loadSource(src);
-      hls.attachMedia(ref.current);
+      hls?.loadSource(src);
+      hls?.attachMedia(ref.current);
       
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        ref.current.play().catch(e => {
+      hls?.on(Hls.Events.MANIFEST_PARSED, () => {
+        ref?.current.play().catch(e => {
           console.error('Autoplay failed:', e);
         });
       });
       
-      hls.on(Hls.Events.ERROR, (event, data) => {
-        if (data.fatal) {
-          switch (data.type) {
+      hls?.on(Hls.Events.ERROR, (event, data) => {
+        if (data?.fatal) {
+          switch (data?.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:
               console.error('Fatal network error encountered, trying to recover');
               hls.startLoad();
@@ -66,7 +66,7 @@ const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
   }, [src, isLive]); // Re-run when src changes
 
   return (
-    <div className="bg-yellow-100 p-5 rounded-2xl overflow-hidden aspect-video relative">
+    <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
       <video
         ref={ref}
         controls

@@ -10,9 +10,9 @@ module.exports = {
     russian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     arabic: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    chinese: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
+    mandarin: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    italian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
+    // italian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
 
   },
   descriptions: {
@@ -25,9 +25,9 @@ module.exports = {
     russian: "Иисус отвечает на молитвы детей", 
     arabic: "يسوع يجيب على صلوات الأطفال",
     swahili: "Yesu anajibu maombi ya watoto",
-    chinese: "耶稣回答孩子们的祷告",
+    mandarin: "耶稣回答孩子们的祷告",
     czech: "Ježíš odpovídá na dětské modlitby",
-    italian: "Gesù risponde alle preghiere dei bambini",
+    // italian: "Gesù risponde alle preghiere dei bambini",
 
 
   },
@@ -41,8 +41,8 @@ module.exports = {
     russian: "Вы смотрите...",
     arabic: "أنت تشاهد...",
     swahili: "Unatazama...",
-    chinese: "你正在观看...",
+    mandarin: "你正在观看...",
     czech: "Sledujete...",
-    italian: "Stai guardando...",
+    // italian: "Stai guardando...",
   },
 };

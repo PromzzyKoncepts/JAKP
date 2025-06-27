@@ -13,10 +13,30 @@ const getInitials = (name) => {
 };
 
 exports.addComment = async (req, res) => {
+
+   const getBgColor = () => {
+  const kidFriendlyColors = [
+    'bg-blue-200', 'bg-green-200', 'bg-yellow-200', 
+    'bg-pink-200', 'bg-purple-200', 'bg-indigo-200',
+    'bg-teal-200', 'bg-orange-200', 'bg-cyan-200',
+    'bg-amber-200', 'bg-lime-200', 'bg-emerald-200'
+  ];
+  return kidFriendlyColors[Math.floor(Math.random() * kidFriendlyColors.length)];
+};
+  
   try {
     const { text, email, fullName } = req.body;
     
     let user = await User.findOne({ email });
+
+    // Check if user is blocked
+    if (user?.isBlocked) {
+      return res.status(403).json({
+        success: false,
+        error: 'Your account has been blocked from commenting'
+      });
+    }
+
     if (!user) {
       user = new User({
         fullName: fullName || 'Anonymous',
@@ -29,6 +49,7 @@ exports.addComment = async (req, res) => {
     const comment = new Comment({
       user: user._id,
       text,
+      color: getBgColor(),
       initials: getInitials(user.fullName)
     });
     
@@ -76,6 +97,42 @@ exports.getAllComments = async (req, res) => {
     });
   } catch (err) {
     console.error('Error getting comments:', err);
+    res.status(400).json({
+      success: false,
+      error: err.message
+    });
+  }
+};
+
+exports.deleteComment = async (req, res) => {
+  try {
+    const { commentId } = req.params;
+    if (!commentId) {
+      return res.status(400).json({
+        success: false,
+        error: 'Comment ID is required'
+      });
+    }
+    // Check if comment exists
+    const comment = await Comment.findById(commentId);
+    if (!comment) {
+      return res.status(404).json({
+        success: false,
+        error: 'Comment not found'
+      });
+    }
+
+    // Delete the comment
+    await Comment.deleteOne({ _id: commentId });
+
+    res.status(200).json({
+      success: true,
+      data: {
+        message: 'Comment deleted successfully'
+      }
+    });
+  } catch (err) {
+    console.error('Error deleting comment:', err);
     res.status(400).json({
       success: false,
       error: err.message

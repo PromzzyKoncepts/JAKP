@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { Fondamento, Geist_Mono, Luckiest_Guy, Sniglet } from "next/font/google";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${luckiestGuy.variable} ${SnigletMono.variable}  ${FondamentoMono.variable} antialiased`}
       >
+        <Toaster position="top-right"/>
         {children}
       </body>
     </html>
