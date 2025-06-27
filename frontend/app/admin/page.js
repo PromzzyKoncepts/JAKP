@@ -9,8 +9,6 @@ import LanguageSelector from "@/components/LanguageSelector";
 import {
   WhatsappShareButton,
   WhatsappIcon,
-  FacebookShareButton,
-  FacebookIcon,
   TelegramShareButton,
   TelegramIcon,
   TwitterShareButton,
@@ -20,10 +18,6 @@ import {
 } from "react-share";
 import Image from "next/image";
 import ImageCarousel from "@/components/Tab";
-import Modal from "@/lib/Modal";
-import ImageUploadPage from "@/components/Picture";
-import PrayerModal from "@/components/Prayer";
-import SponsorModal from "@/components/Sponsor";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -35,11 +29,6 @@ export default function LiveStreamPage() {
   const [socket, setSocket] = useState(null);
   const [viewersCount, setViewersCount] = useState(0);
   const [comments, setComments] = useState([]);
-  const [display, setDisplay] = useState("");
-  const [activeModal, setActiveModal] = useState(null);
-
-  const openModal = (modalName) => setActiveModal(modalName);
-  const closeModal = () => setActiveModal(null);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -131,14 +120,6 @@ export default function LiveStreamPage() {
     });
   };
 
-  // if (!user) {
-  //   return <UserForm onSubmit={handleUserSubmit} />;
-  // }
-
-  // if (!streamData) {
-  //   return <div>Loading stream data...</div>;
-  // }
-
   return (
     <div
       style={{
@@ -146,7 +127,7 @@ export default function LiveStreamPage() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="min-h-screen bg-neutral-200"
+      className="min-h-screen bg-gray-100"
     >
       {!user && <UserForm onSubmit={handleUserSubmit} />}
 
@@ -161,12 +142,12 @@ export default function LiveStreamPage() {
               />
             )}
 
-            <div className="mt-4 bg-[#deac76] hover:translate-y-[-5px] ease-in-out duration-300 py-7 px-6 rounded-lg shadow flex flex-col md:flex-row justify-between items-center gap-2 md:items-start">
+            <div className="mt-4 bg-amber-200 p-4 rounded-lg shadow flex flex-col md:flex-row justify-between items-center gap-2 md:items-start">
               <div>
-                <small className="font-snig text-sm text-cyan-50">
+                <small className="font-snig text-sm text-cyan-700">
                   {streamData?.intro[selectedLanguage]}
                 </small>
-                <h1 className="lg:text-4xl md:text-3xl text-red-900 text-2xl font-bold font-luckiest">
+                <h1 className="md:text-3xl text-amber-700 text-2xl font-bold font-luckiest">
                   {streamData?.descriptions[selectedLanguage]}
                 </h1>
 
@@ -180,19 +161,17 @@ export default function LiveStreamPage() {
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-sm font-snig text-gray-700">
-                  Invite your friends to join you
-                </p>
+                <p className="text-sm text-gray-600">Share live streaming</p>
                 <div>
                   <div className="flex items-center py-2 gap-3">
                     {/* WhatsApp Share */}
-                    <FacebookShareButton
+                    <WhatsappShareButton
                       url={shareUrl}
-                      title="facebook"
+                      title="WhatsApp"
                       className=""
                     >
-                      <FacebookIcon size={40} round={true} />
-                    </FacebookShareButton>
+                      <WhatsappIcon size={40} round={true} />
+                    </WhatsappShareButton>
 
                     <TelegramShareButton url={shareUrl}>
                       <TelegramIcon size={40} round={true} />
@@ -203,7 +182,7 @@ export default function LiveStreamPage() {
                         src="/kingschat.webp"
                         alt="Share"
                         width={500}
-                        className="w-14 md:w-24"
+                        className="w-15"
                         height={500}
                       />
                     </a>
@@ -233,45 +212,12 @@ export default function LiveStreamPage() {
               comments={comments}
               setComments={setComments}
             />
-            {/* <div className="mt-2 font-snig text-lg flex flex-col bg-white p-4 rounded-lg shadow-md">
-              <button onClick={() => setDisplay("upload")} className="hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-lime-600 to-lime-400 text-white p-3 rounded-lg hover:animate-pulse">Upload Participation picture</button>
-              <button onClick={() => setDisplay("prayer")} className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-purple-600 to-purple-400 text-white p-3 rounded-lg hover:animate-pulse">Click to say a prayer of Salvation</button>
-              <button onClick={() => setDisplay("sponsor")} className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-cyan-600 to-cyan-400 text-white p-3 rounded-lg hover:animate-pulse">Sponsor Lovetoons TV</button>
-            </div> */}
 
             <div className="mt-2 font-snig text-lg flex flex-col bg-white p-4 rounded-lg shadow-md">
-              <button
-                onClick={() => openModal("upload")}
-                className="hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-lime-600 to-lime-400 text-white p-3 rounded-lg hover:animate-pulse"
-              >
-                Upload Participation picture
-              </button>
-              <button
-                onClick={() => openModal("prayer")}
-                className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-purple-600 to-purple-400 text-white p-3 rounded-lg hover:animate-pulse"
-              >
-                Click to say a prayer of Salvation
-              </button>
-              <button
-                onClick={() => openModal("sponsor")}
-                className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-cyan-600 to-cyan-400 text-white p-3 rounded-lg hover:animate-pulse"
-              >
-                Sponsor Lovetoons TV
-              </button>
+              <button className="hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-lime-600 to-lime-400 text-white p-3 rounded-lg hover:animate-pulse">Upload Participation picture</button>
+              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-purple-600 to-purple-400 text-white p-3 rounded-lg hover:animate-pulse">Click to say a prayer of Salvation</button>
+              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-cyan-600 to-cyan-400 text-white p-3 rounded-lg hover:animate-pulse">Sponsor Lovetoons TV</button>
             </div>
-
-            {/* Modals */}
-            <Modal isOpen={activeModal === "upload"} onClose={closeModal}>
-              <ImageUploadPage />
-            </Modal>
-
-            <Modal isOpen={activeModal === "prayer"} onClose={closeModal}>
-              <PrayerModal onClose={closeModal} />
-            </Modal>
-
-            <Modal isOpen={activeModal === "sponsor"} onClose={closeModal}>
-              <SponsorModal onClose={closeModal} />
-            </Modal>
           </div>
         </div>
       </div>

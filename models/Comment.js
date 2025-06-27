@@ -11,6 +11,7 @@ const commentSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  color: String,
   initials: {
     type: String,
     required: false
