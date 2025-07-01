@@ -142,7 +142,7 @@ export default function LiveStreamPage() {
   return (
     <div
       style={{
-        backgroundImage: `url(/bg2.jpg)`,
+        backgroundImage: `url(/bg3.jpg)`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
