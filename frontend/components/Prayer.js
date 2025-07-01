@@ -7,15 +7,15 @@ export default function PrayerModal({ onClose }) {
       </h2>
       <div className="space-y-4 text-gray-700">
         <p>
-          Dear Lord Jesus, I come to You today. I know I am a sinner, and I ask
-          for Your forgiveness.
+          Dear Lord Jesus, I come to You today. I thank you for your unconditional love for me, and I recieve
+           forgiveness for all my sins.
         </p>
         <p>
           I believe You died for my sins and rose from the dead. I turn from my
-          sins and invite You to come into my heart and life.
+          sins and invite You to come into my heart and life and transform me by your Spirit.
         </p>
         <p>
-          I want to trust and follow You as my Lord and Savior. In Your name, I
+          I have devoted to trust and follow You as my Lord and Savior. In Your name, I
           pray. Amen.
         </p>
       </div>

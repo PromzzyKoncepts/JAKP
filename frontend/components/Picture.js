@@ -56,7 +56,7 @@ export default function ImageUploadPage({ onClose }) {
     const apiFormData = new FormData()
     apiFormData.append('file', file)
     apiFormData.append('name', fullName)
-    apiFormData.append('scripture', scripture)
+    // apiFormData.append('scripture', scripture)
 
     setIsUploading(true)
     setUploadProgress(0)
@@ -110,7 +110,7 @@ export default function ImageUploadPage({ onClose }) {
   }
 
   return (
-    <div className="min-h-screen font sniglet bg-gray-200 flex md:items-center justify-center p-4">
+    <div className="h-full min-h-[75vh] font sniglet bg-gray-200 flex md:items-center justify-center p-4">
       <Toaster position="top-center" />
       
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
@@ -119,7 +119,7 @@ export default function ImageUploadPage({ onClose }) {
         {onClose && (
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-gray-500  hover:text-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

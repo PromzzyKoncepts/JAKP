@@ -18,7 +18,6 @@ const sanitizeInput = (input) => {
     .replace(/'/g, "&#39;");
 };
 
-// Basic profanity filter (you should expand this list)
 
 
 const containsProfanity = (text) => {
