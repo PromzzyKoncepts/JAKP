@@ -70,7 +70,7 @@ const ImageCarousel = () => {
               alt={image.title}
               width={1500}
               height={1500}
-              className="embla__slide__img md:h-[250px] !object-cover object-top h-fit w-full mx-auto"
+              className="embla__slide__img md:h-[230px] !object-cover object-top h-fit w-full mx-auto"
             />
           </Link>
         ))}

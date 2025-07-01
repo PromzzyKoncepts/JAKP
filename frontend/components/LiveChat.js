@@ -5,9 +5,9 @@ import { EMOJIS } from "@/lib/constants";
 import { FaTelegram } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import toast from "react-hot-toast";
+import { PROFANITY_LIST } from "@/lib/data";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-
 
 // XSS protection function
 const sanitizeInput = (input) => {
@@ -18,15 +18,11 @@ const sanitizeInput = (input) => {
     .replace(/'/g, "&#39;");
 };
 
-// Basic profanity filter (you should expand this list)
-const PROFANITY_LIST = [
-  // Add your list of inappropriate words/phrases here
-  "sex", "fuck", "idiot", "stupid", "dumb", "kiss", "asshole", "bitch", "fuck you", "cunt", "penis", "cum", "pussy"
-];
+
 
 const containsProfanity = (text) => {
   const lowerText = text.toLowerCase();
-  return PROFANITY_LIST.some(word => lowerText.includes(word.toLowerCase()));
+  return PROFANITY_LIST.some((word) => lowerText.includes(word.toLowerCase()));
 };
 
 export default function LiveChat({
@@ -48,7 +44,7 @@ export default function LiveChat({
       try {
         const response = await fetch(`${baseUrl}/api/users/total-participants`);
         const data = await response.json();
-        console.log(data.data.totalParticipants)
+        console.log(data.data.totalParticipants);
         if (data.success) {
           setTotalParticipants(data.data.totalParticipants);
         }
@@ -68,7 +64,6 @@ export default function LiveChat({
         const exists = prev.some((c) => c._id === comment._id);
         return exists ? prev : [...prev, comment];
       });
-      
     };
 
     socket.on("newComment", handleNewComment);
@@ -133,8 +128,7 @@ export default function LiveChat({
     } catch (error) {
       setIsLoading(false);
       console.error("Error submitting comment:", error);
-    }
-    finally {
+    } finally {
       setIsLoading(false);
     }
   };
@@ -151,7 +145,9 @@ export default function LiveChat({
 
       if (response.ok) {
         // Remove the comment from local state
-        setComments(prev => prev.filter(comment => comment._id !== commentId));
+        setComments((prev) =>
+          prev.filter((comment) => comment._id !== commentId)
+        );
       } else {
         console.error("Failed to delete comment");
       }
@@ -171,7 +167,9 @@ export default function LiveChat({
 
       if (response.ok) {
         // Remove all comments from this user from local state
-        setComments(prev => prev.filter(comment => comment.user?._id !== userId));
+        setComments((prev) =>
+          prev.filter((comment) => comment.user?._id !== userId)
+        );
 
         toast(`User ${email} has been blocked and their comments removed`);
       } else {
@@ -187,14 +185,23 @@ export default function LiveChat({
       <div className="p-4 border-b">
         <h2 className="font-semibold">Live Chat</h2>
         {pathname.startsWith("/admin") && (
-          <div  className="flex items-center gap-5"><p className="text-sm text-gray-500">{viewersCount} connected</p>
-          <p  className="text-sm text-gray-500">{totalParticipants} total participants</p></div>
+          <div className="flex items-center gap-5">
+            <p className="text-sm text-gray-500">{viewersCount} connected</p>
+            <p className="text-sm text-gray-500">
+              {totalParticipants} total participants
+            </p>
+          </div>
         )}
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {comments.map((comment) => (
-          <div key={comment._id} className={`flex gap-3 ${comment?.color || getBgColor()} p-3 rounded-lg hover:translate-y-[-5px] ease-in-out duration-300 hover:shadow-md`}>
+          <div
+            key={comment._id}
+            className={`flex gap-3 ${
+              comment?.color || getBgColor()
+            } p-3 rounded-lg hover:translate-y-[-5px] ease-in-out duration-300 hover:shadow-md`}
+          >
             <div
               className={`flex-shrink-0 w-8 h-8 rounded-full ${getRandomColor()} border border-slate-200 flex items-center justify-center text-white font-luckiest font-normal`}
             >
@@ -207,13 +214,15 @@ export default function LiveChat({
                 </p>
                 {pathname.startsWith("/admin") && (
                   <div className="flex gap-5 items-center">
-                    <button 
-                      onClick={() => handleBlockUser(comment.user?._id, comment.user?.email)}
+                    <button
+                      onClick={() =>
+                        handleBlockUser(comment.user?._id, comment.user?.email)
+                      }
                       className="text-xs cursor-pointer text-red-500"
                     >
                       block
                     </button>
-                    <button 
+                    <button
                       onClick={() => handleDeleteComment(comment._id)}
                       className="text-xs cursor-pointer text-amber-500"
                     >
@@ -262,11 +271,11 @@ export default function LiveChat({
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Add a comment..."
             className="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-             disabled={isLoading}
+            disabled={isLoading}
           />
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="text-cyan-500 hover:text-cyan-700 disabled:opacity-50"
             disabled={isLoading}
           >
