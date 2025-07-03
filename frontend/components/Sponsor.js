@@ -36,8 +36,8 @@ export default function SponsorModal({ onClose }) {
               className="bg-gray-50 p-4 rounded-lg border border-gray-200"
             >
               <h3 className="font-bold font-luckiest tracking-wide  text-lg text-amber-800">{detail.bank}</h3>
-              <p className="text-gray-600">Account Name: {detail.name}</p>
-              <p className="text-gray-600 ">Account Number: <span className="text-lg font-medium">{detail.account}</span></p>
+              <p className="text-gray-600">{detail.name !== "KMP" ? "Account Name:" : "Recipient Code:" } {detail.name}</p>
+              {detail.name !== "KMP" && (<p className="text-gray-600 ">Account Number: <span className="text-lg font-medium">{detail.account}</span></p>)}
             </div>
           ))}
         </div>
