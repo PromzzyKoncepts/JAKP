@@ -34,6 +34,9 @@ const corsOptions = {
     "https://parenthub.lovetoons.org",
     "https://jakp.lovetoons.org",
     "https://lovetoons.org",
+    "https://lovetoons.tv",
+    "https://lovetoons.tv/jakp",
+    "https://lovetoons.org/jakp",
     "*"
   ],
 
