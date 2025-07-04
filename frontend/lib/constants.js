@@ -6,12 +6,13 @@ export const LANGUAGES = [
   { code: 'german', label: 'German' },
   { code: 'hindi', label: 'Hindi' },
   { code: 'russian', label: 'Russian' },
-  { code: 'arabic', label: 'Arabic' },
-  { code: 'swahili', label: 'Swahili' },
   { code: 'mandarin', label: 'Mandarin' },
   { code: 'portugese', label: 'Portuguese' },
   { code: 'czech', label: 'Czech' },
-  // { code: 'italian', label: 'Italian' }
+  { code: 'turkish', label: 'Turkish' },
+  { code: 'dutch', label: 'Dutch' }
+  // { code: 'swahili', label: 'Swahili' },
+  // { code: 'arabic', label: 'Arabic' },
 ];
 
 export const EMOJIS = [

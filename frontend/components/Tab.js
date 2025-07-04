@@ -57,8 +57,8 @@ const ImageCarousel = () => {
   );
 
   return (
-    <div className="embla pt-5" ref={emblaRef}>
-      <div className="embla__container  ">
+    <div className="embla pt-12 !h-fit" ref={emblaRef}>
+      <div className="embla__container  !h-fit">
         {carousels.map((image, index) => (
           <Link
             href={image.link ? image.link : ""}
@@ -70,7 +70,7 @@ const ImageCarousel = () => {
               alt={image.title}
               width={1500}
               height={1500}
-              className="embla__slide__img md:h-[230px] !object-cover object-top h-fit w-full mx-auto"
+              className="embla__slide__img md:h-[230px] !object-cover object-top h-[100px] w-full mx-auto"
             />
           </Link>
         ))}
