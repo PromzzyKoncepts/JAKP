@@ -1,9 +1,10 @@
 // app/live/components/UserForm.jsx
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function UserForm({ onSubmit }) {
+  const [scale, setScale] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -23,21 +24,51 @@ export default function UserForm({ onSubmit }) {
     onSubmit(formData);
   };
 
+  useEffect(() => {
+    if (scale) {
+      const timer = setTimeout(() => {
+        setScale(false);
+      }, 500); // Match this with your animation duration
+
+      return () => clearTimeout(timer);
+    }
+
+  }, [scale]);
+
   return (
-    <div className="fixed inset-0 bg-[#864f1470] backdrop-blur flex items-center justify-center z-50 font-snig">
-      <div className="bg-white  rounded-lg max-w-3xl border-2 border-yellow-500 shadow-lg w-full flex  items-stretch">
-        <Image src="/gafl.jpg" alt="intro" width={300} height={300} className="w-full object-cover rounded-lg" />
+    <div
+      onClick={() => setScale(!scale)}
+      className="fixed inset-0 bg-[#864f145c] backdrop-blur flex items-center justify-center z-50 font-snig"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`bg-white ${
+          scale && "animate-shake animate-once animate-ease-in-out "
+        }  rounded-lg max-w-3xl border-2 border-yellow-500 shadow-lg w-[85%] flex  items-stretch`}
+      >
+        <img
+          src="/widebg.png"
+          alt="intro"
+          width={300}
+          height={300}
+          className="w-[50%] object-cover hidden md:block rounded-l-lg"
+        />
         <div className="px-10 py-5 w-full">
-          <h2 className="text-xl md:text-3xl font-luckiest text-cyan-700 whitespace-nowrap font-bold mb-6 text-center">
-            Participant Form
-          </h2>
+          <div className="mb-5">
+            <h2 className="text-2xl md:text-3xl font-luckiest text-[#1C4A95] whitespace-nowrap font-bold  text-center">
+              Participant Form
+            </h2>
+            <small className="flex justify-center">
+              Kindly fill the form below accurately!{" "}
+            </small>
+          </div>
           <form onSubmit={handleSubmit} className="space-y-4 ">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Full Name
               </label>
               <input
-              autoFocus
+                autoFocus
                 type="text"
                 name="fullName"
                 value={formData.fullName}

@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
      <head>
-       <link rel="icon" href="/public/logo.png" />
+       <link rel="icon" href="https://lovetoons.org/icons/favicon.ico" />
      </head>
       <body
         className={`${luckiestGuy.variable} ${SnigletMono.variable}  ${FondamentoMono.variable} antialiased`}

@@ -7,16 +7,21 @@ export default function PrayerModal({ onClose }) {
       </h2>
       <div className="space-y-4 text-gray-700">
         <p>
-          Dear Lord Jesus, I come to You today. I thank you for your unconditional love for me, and I recieve
-           forgiveness for all my sins.
+          O lord God, I believe with all my heart in Jesus Christ, Son of the Living  God.
         </p>
         <p>
-          I believe You died for my sins and rose from the dead. I turn from my
-          sins and invite You to come into my heart and life and transform me by your Spirit.
+          I believe He died for me and God raised Him from the dead. I believe He's alive today.
+          I confess with my mouth, that Jesus Christ is the Lord of my life from this day.
         </p>
         <p>
-          I have devoted to trust and follow You as my Lord and Savior. In Your name, I
-          pray. Amen.
+          Through Him and in His name I have Eternal life
+        </p>
+        <p>
+          I AM BORN AGAIN!
+        </p>
+        <p>
+          Thank you Lord, for saving my soul.
+          I am now a child of God
         </p>
       </div>
       <div className="mt-6 text-center">

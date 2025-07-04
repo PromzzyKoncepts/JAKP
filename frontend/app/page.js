@@ -149,19 +149,33 @@ export default function LiveStreamPage() {
       }}
       className="min-h-screen bg-neutral-200"
     >
-
       {!user && <UserForm onSubmit={handleUserSubmit} />}
-      <Header />
+      {/* <Header /> */}
 
       <ImageCarousel />
       <div className="container mx-auto px-5 md:px-16 py-6  md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-2/3">
-            {streamData?.streamingLinks && (
+            {streamData?.streamingLinks ? (
               <VideoPlayer
                 ref={videoRef}
                 src={streamData?.streamingLinks[selectedLanguage]}
               />
+            ) : (
+              <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
+                <video
+                  src=""
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute top-8 left-8 bg-red-600 text-white text-xs px-2 py-1 rounded-md">
+                  LIVE
+                </div>
+              </div>
             )}
 
             <div className="mt-4 bg-[#deac76] hover:translate-y-[-5px] ease-in-out duration-300 py-7 px-6 rounded-lg shadow flex flex-col md:flex-row justify-between items-center gap-2 md:items-start">
@@ -202,7 +216,7 @@ export default function LiveStreamPage() {
                     </TelegramShareButton>
 
                     <a target="_blank" href={"https://kingschat.online"}>
-                      <Image
+                      <img
                         src="/kingschat.webp"
                         alt="Share"
                         width={500}

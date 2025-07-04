@@ -12,7 +12,7 @@ module.exports = {
     czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5508_001/d6ddcb974772d0631eef156996d5ae25.sdp/playlist.m3u8",
     turkish: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5506_001/2368376e3ba4a7d5d9c0e9468da376ac.sdp/playlist.m3u8",
     dutch: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5507_001/bd7355af90348dc4d02bf3bb452a6a13.sdp/playlist.m3u8",
-    // arabic: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
+    english2: "https://081b4a175100.entrypoint.cloud.wowza.com/app-4r5S3C43/ngrp:da986064_all/playlist.m3u8",
     // swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
 
   },
@@ -28,6 +28,7 @@ module.exports = {
     czech: "Ježíš odpovídá na dětské modlitby",
     turkish: "İsa çocukların dualarına cevap veriyor",
     dutch: "Jezus beantwoordt kindergebeden",
+    english2: "Jesus Answers Kids Prayers",
     // arabic: "يسوع يجيب على صلوات الأطفال",
 
 
@@ -44,6 +45,7 @@ module.exports = {
     czech: "Sledujete...",
     turkish: "Sen izliyorsun...",
     dutch: "Je kijkt momenteel...",
+    english2: "You are watching...",
     // arabic: "أنت تشاهد...",
   },
 };
