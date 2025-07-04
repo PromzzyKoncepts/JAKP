@@ -14,38 +14,38 @@ const ImageCarousel = () => {
     // },
     {
       title: "Tick Talk",
-      src: "/tiktalk.png",
+      src: "/ticktalk.png",
       // link: "/lbrf",
     },
     {
       title: "Gratias card",
-      src: "/comm.png",
+      src: "/comicss.png",
       // link: "/lbrf",
     },
-    {
-      title: "JAKP",
-      src: "/JAKP.png",
-    },
-    {
-      title: "Comics 3",
-      src: "/global.png",
-    },
-    {
-      title: "fiesta 2",
-      src: "/year.jpg",
-    },
-    {
-      title: "fiesta 2",
-      src: "/comics.png",
-    },
-    {
-      title: "fiesta 2",
-      src: "/tiktalk.png",
-    },
+    // {
+    //   title: "JAKP",
+    //   src: "/JAKP.png",
+    // },
+    // {
+    //   title: "Comics 3",
+    //   src: "/global.png",
+    // },
+    // {
+    //   title: "fiesta 2",
+    //   src: "/year.jpg",
+    // },
+    // {
+    //   title: "fiesta 2",
+    //   src: "/comics.png",
+    // },
     {
       title: "fiesta 2",
-      src: "/app.png",
+      src: "/disc.png",
     },
+    // {
+    //   title: "fiesta 2",
+    //   src: "/app.png",
+    // },
   ];
   const [emblaRef] = useEmblaCarousel(
     {
