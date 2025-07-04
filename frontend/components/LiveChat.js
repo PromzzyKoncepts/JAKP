@@ -73,9 +73,9 @@ export default function LiveChat({
     };
   }, [socket, setComments]);
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [comments]);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [comments]);
 
   const scrollToBottom = () => {
     commentsEndRef.current?.scrollIntoView({ behavior: "smooth" });
