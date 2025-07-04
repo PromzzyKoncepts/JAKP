@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function UserForm({ onSubmit }) {
+export default function UserForm({ onSubmit, isMuted, setIsMuted }) {
   const [scale, setScale] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -108,6 +108,7 @@ export default function UserForm({ onSubmit }) {
 
             <button
               type="submit"
+              onClick={() => setIsMuted(false)}
               className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
             >
               Join Stream

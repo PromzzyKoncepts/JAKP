@@ -3,7 +3,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 
-const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
+const VideoPlayer = forwardRef(({ src, isLive = true, isMuted }, ref) => {
   const hlsRef = useRef(null);
 
   const initializeHls = () => {
@@ -71,7 +71,7 @@ const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
         ref={ref}
         controls
         autoPlay
-        muted
+        muted={isMuted}
         playsInline
         className="w-full h-full object-cover"
       />

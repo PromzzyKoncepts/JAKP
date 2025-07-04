@@ -38,7 +38,7 @@ export default function LiveStreamPage() {
   const [comments, setComments] = useState([]);
   const [display, setDisplay] = useState("");
   const [activeModal, setActiveModal] = useState(null);
-
+  const [isMuted, setIsMuted] = useState(true);
   const openModal = (modalName) => setActiveModal(modalName);
   const closeModal = () => setActiveModal(null);
   const videoRef = useRef(null);
@@ -149,23 +149,30 @@ export default function LiveStreamPage() {
       }}
       className="min-h-screen bg-neutral-200"
     >
-      {!user && <UserForm onSubmit={handleUserSubmit} />}
+      {!user && (
+        <UserForm
+          onSubmit={handleUserSubmit}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
+        />
+      )}
       {/* <Header /> */}
-      <img src="/slider.png" className="md:pt-5 pt-2 w-full h-fit"/>
+      <img src="/slider.png" className="md:pt-5 pt-2 w-full h-fit" />
 
-      {/* <ImageCarousel /> */}
       <div className="container mx-auto px-5 md:px-16 py-6  md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-2/3">
             {streamData?.streamingLinks ? (
               <VideoPlayer
+                isMuted={isMuted}
+                setIsMuted={setIsMuted}
                 ref={videoRef}
                 src={streamData?.streamingLinks[selectedLanguage]}
               />
             ) : (
               <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
                 <video
-                  src=""
+                  src={null}
                   controls
                   autoPlay
                   muted
@@ -244,6 +251,8 @@ export default function LiveStreamPage() {
           </div>
 
           <div className="lg:w-1/3">
+            <ImageCarousel />
+
             <LiveChat
               socket={socket}
               user={user}
