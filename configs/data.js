@@ -2,17 +2,18 @@
 module.exports = {
   streamingLinks: {
     english: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    french: "https://cdnstack.internetmultimediaonline.org/ln24/lntoons.stream/playlist.m3u8",
-    espanol: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    german: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    hindi: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    portugese: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    russian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
+    french: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5498_001/924506967eeda66c8408e2ca9fd4bf30.sdp/playlist.m3u8",
+    espanol: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5505_001/ac3cbb60743bb84e613b80891b5e08ef.sdp/playlist.m3u8",
+    german: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5504_001/cec3a1908a0b3e01d06a7f95153c5288.sdp/playlist.m3u8",
+    hindi: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5502_001/16b529bd101d4b229040ea78e96b348d.sdp/playlist.m3u8",
+    portugese: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5501_001/93c349fe7ff37b5a360facd335939aec.sdp/playlist.m3u8",
+    russian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5503_001/2333eee73f677f4e5d10beffb8de2186.sdp/playlist.m3u8",
     arabic: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    mandarin: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
-    // italian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
+    mandarin: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5500_001/8ae4fbb76bd85b7914838759adc5b978.sdp/playlist.m3u8",
+    czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5508_001/d6ddcb974772d0631eef156996d5ae25.sdp/playlist.m3u8",
+    turkish: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5506_001/2368376e3ba4a7d5d9c0e9468da376ac.sdp/playlist.m3u8",
+    dutch: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5507_001/bd7355af90348dc4d02bf3bb452a6a13.sdp/playlist.m3u8",
+    // swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
 
   },
   descriptions: {
@@ -24,10 +25,10 @@ module.exports = {
     portugese: "Jesus responde às orações das crianças",
     russian: "Иисус отвечает на молитвы детей", 
     arabic: "يسوع يجيب على صلوات الأطفال",
-    swahili: "Yesu anajibu maombi ya watoto",
     mandarin: "耶稣回答孩子们的祷告",
     czech: "Ježíš odpovídá na dětské modlitby",
-    // italian: "Gesù risponde alle preghiere dei bambini",
+    turkish: "İsa çocukların dualarına cevap veriyor",
+    dutch: "Jezus beantwoordt kindergebeden",
 
 
   },
@@ -40,9 +41,9 @@ module.exports = {
     portugese: "Você está assistindo...", 
     russian: "Вы смотрите...",
     arabic: "أنت تشاهد...",
-    swahili: "Unatazama...",
     mandarin: "你正在观看...",
     czech: "Sledujete...",
-    // italian: "Stai guardando...",
+    turkish: "Sen izliyorsun...",
+    dutch: "Je kijkt momenteel...",
   },
 };

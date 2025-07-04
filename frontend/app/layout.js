@@ -33,10 +33,8 @@ export const metadata = {
     url: "https://jakp.lovetoons.org",
     siteName: "JAKP - Jesus Answers Kids Prayers",
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/shortcut-icon.png",
+ icons: {
+    icon: "/logo.png",
   },
   robots: {
     index: true,
@@ -49,7 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     
+     <head>
+       <link rel="icon" href="/public/logo.png" />
+     </head>
       <body
         className={`${luckiestGuy.variable} ${SnigletMono.variable}  ${FondamentoMono.variable} antialiased`}
       >

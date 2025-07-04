@@ -26,7 +26,7 @@ export default function UserForm({ onSubmit }) {
   return (
     <div className="fixed inset-0 bg-[#864f1470] backdrop-blur flex items-center justify-center z-50 font-snig">
       <div className="bg-white  rounded-lg max-w-3xl border-2 border-yellow-500 shadow-lg w-full flex  items-stretch">
-        <Image src="/intro.png" alt="intro" width={300} height={300} className="w-full object-cover rounded-lg" />
+        <Image src="/gafl.jpg" alt="intro" width={300} height={300} className="w-full object-cover rounded-lg" />
         <div className="px-10 py-5 w-full">
           <h2 className="text-xl md:text-3xl font-luckiest text-cyan-700 whitespace-nowrap font-bold mb-6 text-center">
             Participant Form
