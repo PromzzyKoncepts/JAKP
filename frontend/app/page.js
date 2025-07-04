@@ -151,8 +151,9 @@ export default function LiveStreamPage() {
     >
       {!user && <UserForm onSubmit={handleUserSubmit} />}
       {/* <Header /> */}
+      <img src="/slider.png" className="md:pt-5 pt-2 w-full h-fit"/>
 
-      <ImageCarousel />
+      {/* <ImageCarousel /> */}
       <div className="container mx-auto px-5 md:px-16 py-6  md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-2/3">
