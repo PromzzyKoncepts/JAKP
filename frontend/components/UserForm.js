@@ -46,16 +46,16 @@ export default function UserForm({ onSubmit }) {
           scale && "animate-shake animate-once animate-ease-in-out "
         }  rounded-lg max-w-3xl border-2 border-yellow-500 shadow-lg w-[85%] flex  items-stretch`}
       >
-        <Image
-          src="/gafl.jpg"
+        <img
+          src="/widebg.png"
           alt="intro"
           width={300}
           height={300}
-          className="w-full object-cover hidden md:block rounded-l-lg"
+          className="w-[50%] object-cover hidden md:block rounded-l-lg"
         />
         <div className="px-10 py-5 w-full">
           <div className="mb-5">
-            <h2 className="text-2xl md:text-3xl font-luckiest text-cyan-700 whitespace-nowrap font-bold  text-center">
+            <h2 className="text-2xl md:text-3xl font-luckiest text-[#1C4A95] whitespace-nowrap font-bold  text-center">
               Participant Form
             </h2>
             <small className="flex justify-center">

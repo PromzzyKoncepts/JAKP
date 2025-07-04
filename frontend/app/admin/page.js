@@ -178,7 +178,7 @@ export default function LiveStreamPage() {
                     </TelegramShareButton>
 
                     <a target="_blank" href={"https://kingschat.online"}>
-                      <Image
+                      <img
                         src="/kingschat.webp"
                         alt="Share"
                         width={500}

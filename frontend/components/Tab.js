@@ -1,7 +1,7 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 const ImageCarousel = () => {
@@ -65,7 +65,7 @@ const ImageCarousel = () => {
             key={index}
             className="embla__slide h-fit "
           >
-            <Image
+            <img
               src={image.src}
               alt={image.title}
               width={1500}

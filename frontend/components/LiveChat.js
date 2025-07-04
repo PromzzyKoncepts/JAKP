@@ -249,7 +249,7 @@ export default function LiveChat({
           </button>
 
           {showEmojis && (
-            <div className="absolute bottom-16 left-4 bg-white p-2 rounded-lg shadow-lg grid grid-cols-6 gap-1 z-10">
+            <div className="absolute bottom-16 left-4 bg-white w-ful p-2 rounded-lg shadow-lg grid grid-cols-12 gap-1 z-10">
               {EMOJIS.map((emoji, index) => (
                 <button
                   key={index}
