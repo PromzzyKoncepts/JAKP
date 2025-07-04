@@ -24,6 +24,7 @@ import Modal from "@/lib/Modal";
 import ImageUploadPage from "@/components/Picture";
 import PrayerModal from "@/components/Prayer";
 import SponsorModal from "@/components/Sponsor";
+import Header from "@/components/Header";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -148,7 +149,9 @@ export default function LiveStreamPage() {
       }}
       className="min-h-screen bg-neutral-200"
     >
+
       {!user && <UserForm onSubmit={handleUserSubmit} />}
+      <Header />
 
       <ImageCarousel />
       <div className="container mx-auto px-5 md:px-16 py-6  md:pb-8">

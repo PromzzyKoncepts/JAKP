@@ -8,11 +8,11 @@ module.exports = {
     hindi: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5502_001/16b529bd101d4b229040ea78e96b348d.sdp/playlist.m3u8",
     portugese: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5501_001/93c349fe7ff37b5a360facd335939aec.sdp/playlist.m3u8",
     russian: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5503_001/2333eee73f677f4e5d10beffb8de2186.sdp/playlist.m3u8",
-    arabic: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     mandarin: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5500_001/8ae4fbb76bd85b7914838759adc5b978.sdp/playlist.m3u8",
     czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5508_001/d6ddcb974772d0631eef156996d5ae25.sdp/playlist.m3u8",
     turkish: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5506_001/2368376e3ba4a7d5d9c0e9468da376ac.sdp/playlist.m3u8",
     dutch: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5507_001/bd7355af90348dc4d02bf3bb452a6a13.sdp/playlist.m3u8",
+    // arabic: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     // swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
 
   },
@@ -24,11 +24,11 @@ module.exports = {
     hindi: "ईसा बच्चों की प्रार्थनाओं का उत्तर देते हैं",
     portugese: "Jesus responde às orações das crianças",
     russian: "Иисус отвечает на молитвы детей", 
-    arabic: "يسوع يجيب على صلوات الأطفال",
     mandarin: "耶稣回答孩子们的祷告",
     czech: "Ježíš odpovídá na dětské modlitby",
     turkish: "İsa çocukların dualarına cevap veriyor",
     dutch: "Jezus beantwoordt kindergebeden",
+    // arabic: "يسوع يجيب على صلوات الأطفال",
 
 
   },
@@ -40,10 +40,10 @@ module.exports = {
     hindi: "आप देख रहे हैं...",
     portugese: "Você está assistindo...", 
     russian: "Вы смотрите...",
-    arabic: "أنت تشاهد...",
     mandarin: "你正在观看...",
     czech: "Sledujete...",
     turkish: "Sen izliyorsun...",
     dutch: "Je kijkt momenteel...",
+    // arabic: "أنت تشاهد...",
   },
 };
