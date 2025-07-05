@@ -1,7 +1,7 @@
 // configs/data.js
 module.exports = {
   streamingLinks: {
-    english: "https://zkpywpmblbeg-hls-live.5centscdn.com/LOVEWORLDKIDDIES/7cd9d740a2b7ea3e70246ab8245b8325.sdp/playlist.m3u8",
+    english: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     french: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5498_001/924506967eeda66c8408e2ca9fd4bf30.sdp/playlist.m3u8",
     espanol: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5505_001/ac3cbb60743bb84e613b80891b5e08ef.sdp/playlist.m3u8",
     german: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5504_001/cec3a1908a0b3e01d06a7f95153c5288.sdp/playlist.m3u8",
@@ -12,7 +12,7 @@ module.exports = {
     czech: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5508_001/d6ddcb974772d0631eef156996d5ae25.sdp/playlist.m3u8",
     turkish: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5506_001/2368376e3ba4a7d5d9c0e9468da376ac.sdp/playlist.m3u8",
     dutch: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_5507_001/bd7355af90348dc4d02bf3bb452a6a13.sdp/playlist.m3u8",
-    english2: "https://zkpywpmblbeg-hls-live.5centscdn.com/LOVEWORLDKIDDIES/7cd9d740a2b7ea3e70246ab8245b8325.sdp/playlist.m3u8",
+    english2: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
     // swahili: "https://zkpywpmblbeg-hls-live.5centscdn.com/9346_push_4321_002/3cb801a1be6f29310b96fc5e9ec083be.sdp/playlist.m3u8",
 
   },
