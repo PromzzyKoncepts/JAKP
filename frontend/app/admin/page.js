@@ -29,6 +29,7 @@ export default function LiveStreamPage() {
   const [socket, setSocket] = useState(null);
   const [viewersCount, setViewersCount] = useState(0);
   const [comments, setComments] = useState([]);
+  const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -129,17 +130,40 @@ export default function LiveStreamPage() {
       }}
       className="min-h-screen bg-gray-100"
     >
-      {!user && <UserForm onSubmit={handleUserSubmit} />}
+      {!user && (
+        <UserForm
+          onSubmit={handleUserSubmit}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
+        />
+      )}
 
-      <ImageCarousel />
+      {/* <ImageCarousel /> */}
+      <img src="/slider.png" className="md:pt-5 pt-2 w-full h-fit" />
       <div className="container mx-auto px-5 md:px-16 py-6  md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-2/3">
-            {streamData?.streamingLinks && (
+            {streamData?.streamingLinks ? (
               <VideoPlayer
+                isMuted={isMuted}
                 ref={videoRef}
                 src={streamData?.streamingLinks[selectedLanguage]}
               />
+            ) : (
+              <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
+                <video
+                  src={null}
+                  controls
+                  autoPlay
+                  // muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute top-8 left-8 bg-red-600 text-white text-xs px-2 py-1 rounded-md">
+                  LIVE
+                </div>
+              </div>
             )}
 
             <div className="mt-4 bg-amber-200 p-4 rounded-lg shadow flex flex-col md:flex-row justify-between items-center gap-2 md:items-start">
@@ -205,6 +229,7 @@ export default function LiveStreamPage() {
           </div>
 
           <div className="lg:w-1/3">
+            <ImageCarousel />
             <LiveChat
               socket={socket}
               user={user}
@@ -214,9 +239,15 @@ export default function LiveStreamPage() {
             />
 
             <div className="mt-2 font-snig text-lg flex flex-col bg-white p-4 rounded-lg shadow-md">
-              <button className="hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-lime-600 to-lime-400 text-white p-3 rounded-lg hover:animate-pulse">Upload Participation picture</button>
-              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-purple-600 to-purple-400 text-white p-3 rounded-lg hover:animate-pulse">Click to say a prayer of Salvation</button>
-              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-cyan-600 to-cyan-400 text-white p-3 rounded-lg hover:animate-pulse">Sponsor Lovetoons TV</button>
+              <button className="hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-lime-600 to-lime-400 text-white p-3 rounded-lg hover:animate-pulse">
+                Upload Participation picture
+              </button>
+              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-purple-600 to-purple-400 text-white p-3 rounded-lg hover:animate-pulse">
+                Click to say a prayer of Salvation
+              </button>
+              <button className="mt-2 hover:translate-y-[-5px] ease-in-out duration-300 cursor-pointer bg-gradient-to-t from-cyan-600 to-cyan-400 text-white p-3 rounded-lg hover:animate-pulse">
+                Sponsor Lovetoons TV
+              </button>
             </div>
           </div>
         </div>

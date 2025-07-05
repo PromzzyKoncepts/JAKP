@@ -3,7 +3,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 
-const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
+const VideoPlayer = forwardRef(({ src, isLive = true, isMuted }, ref) => {
   const hlsRef = useRef(null);
 
   const initializeHls = () => {
@@ -66,12 +66,12 @@ const VideoPlayer = forwardRef(({ src, isLive = true }, ref) => {
   }, [src, isLive]); // Re-run when src changes
 
   return (
-    <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
+    <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2 rounded-xl overflow-hidden aspect-video relative">
       <video
         ref={ref}
         controls
         autoPlay
-        muted
+        muted={isMuted}
         playsInline
         className="w-full h-full object-cover"
       />

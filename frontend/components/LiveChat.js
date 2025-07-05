@@ -183,7 +183,7 @@ export default function LiveChat({
   return (
     <div className="bg-white rounded-lg font-snig shadow h-[70vh] flex flex-col">
       <div className="p-4 border-b">
-        <h2 className="font-semibold">Live Chat</h2>
+        <h2 className="font-semibold text-lg">Live Chat</h2>
         {pathname.startsWith("/admin") && (
           <div className="flex items-center gap-5">
             <p className="text-sm text-gray-500">{viewersCount} connected</p>
@@ -195,7 +195,9 @@ export default function LiveChat({
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {comments.map((comment) => (
+        {comments?.length === 0 ? (
+          <div className="text-center text-gray-500">Be the first to comment!</div>
+        ) : comments?.map((comment) => (
           <div
             key={comment._id}
             className={`flex gap-3 ${
