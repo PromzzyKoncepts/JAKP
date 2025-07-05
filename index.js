@@ -19,7 +19,13 @@ const io = socketIo(server, {
       "http://localhost:3000",
       "https://parenthub.lovetoons.org",
       "https://jakp.lovetoons.org",
+      "https://live.jakp.lovetoons.org",
+      "http://live.jakp.lovetoons.org",
       "https://lovetoons.org",
+      "https://lovetoons.tv",
+      "https://lovetoons.tv/jakp",
+      "https://lovetoons.org/jakp",
+      "*",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -39,7 +45,7 @@ const corsOptions = {
     "https://lovetoons.tv",
     "https://lovetoons.tv/jakp",
     "https://lovetoons.org/jakp",
-    "*"
+    "*",
   ],
 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
