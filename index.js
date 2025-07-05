@@ -33,6 +33,8 @@ const corsOptions = {
     "http://localhost:3000",
     "https://parenthub.lovetoons.org",
     "https://jakp.lovetoons.org",
+    "https://live.jakp.lovetoons.org",
+    "http://live.jakp.lovetoons.org",
     "https://lovetoons.org",
     "https://lovetoons.tv",
     "https://lovetoons.tv/jakp",
