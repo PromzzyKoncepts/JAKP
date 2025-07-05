@@ -14,12 +14,12 @@ const ImageCarousel = () => {
     // },
     {
       title: "Tick Talk",
-      src: "/ticktalk.png",
+      src: "/ticktalksmall.png",
       // link: "/lbrf",
     },
     {
       title: "Gratias card",
-      src: "/comicss.png",
+      src: "/comicssmall.png",
       // link: "/lbrf",
     },
     // {
@@ -34,13 +34,13 @@ const ImageCarousel = () => {
     //   title: "fiesta 2",
     //   src: "/year.jpg",
     // },
-    // {
-    //   title: "fiesta 2",
-    //   src: "/comics.png",
-    // },
     {
       title: "fiesta 2",
-      src: "/disc.png",
+      src: "/comms.png",
+    },
+    {
+      title: "fiesta 2",
+      src: "/gkpc.png",
     },
     // {
     //   title: "fiesta 2",
@@ -70,7 +70,7 @@ const ImageCarousel = () => {
               alt={image.title}
               width={1500}
               height={1500}
-              className="embla__slide__img md:h-[230px] rounded-xl !object-cover object-top h-[130px] w-full mx-auto"
+              className="embla__slide__img md:h-[230px] rounded-xl !object-cover object-top  w-full mx-auto"
             />
           </Link>
         ))}

@@ -66,7 +66,7 @@ const VideoPlayer = forwardRef(({ src, isLive = true, isMuted }, ref) => {
   }, [src, isLive]); // Re-run when src changes
 
   return (
-    <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2.5 rounded-2xl overflow-hidden aspect-video relative">
+    <div className="bg-yellow-600 md:bg-yellow-100 md:p-5 p-2 rounded-xl overflow-hidden aspect-video relative">
       <video
         ref={ref}
         controls
