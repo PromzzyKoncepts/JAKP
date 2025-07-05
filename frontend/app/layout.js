@@ -1,6 +1,8 @@
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { Fondamento, Geist_Mono, Luckiest_Guy, Sniglet } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 const luckiestGuy = Luckiest_Guy({
@@ -55,6 +57,8 @@ export default function RootLayout({ children }) {
       >
         <Toaster position="top-right"/>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

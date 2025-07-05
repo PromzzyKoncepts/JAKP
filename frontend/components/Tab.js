@@ -40,7 +40,7 @@ const ImageCarousel = () => {
     },
     {
       title: "fiesta 2",
-      src: "/gkpc.png",
+      src: "/gkpcc.png",
     },
     // {
     //   title: "fiesta 2",
